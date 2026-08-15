@@ -1,0 +1,758 @@
+import requests
+
+cookies = {
+    'ig_did': 'E8314AF9-DC29-4D96-8156-A48190F94450',
+    'datr': 'hZJ_asIWPxeRCWBvLRXiQ-PU',
+    'dpr': '3',
+    'mid': 'an-ShQABAAHKgVjqhW49mC2ihV7a',
+    'csrftoken': 'b9vhwL1lit6wsELuEWR9WfFDii1GqKKu',
+    'ds_user_id': '77224903190',
+    'sessionid': '77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA',
+    'rd_challenge': 'Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M',
+    'wd': '360x720',
+    'rur': 'RVA%2C17841477255723112%2C1787962739%3A01ff0e558a6050b70a6cb83eb1330ae9504f51ebf78dff7155af95e5ac0f10be4a0384f5',
+}
+
+headers = {
+    'authority': 'www.instagram.com',
+    'accept': '*/*',
+    'accept-language': 'ar-EG,ar-MA;q=0.9,ar;q=0.8,en-US;q=0.7,en;q=0.6',
+    'content-type': 'multipart/form-data; boundary=----WebKitFormBoundarylzioAkBTgq9hNH2B',
+    # 'cookie': 'ig_did=E8314AF9-DC29-4D96-8156-A48190F94450; datr=hZJ_asIWPxeRCWBvLRXiQ-PU; dpr=3; mid=an-ShQABAAHKgVjqhW49mC2ihV7a; csrftoken=b9vhwL1lit6wsELuEWR9WfFDii1GqKKu; ds_user_id=77224903190; sessionid=77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA; rd_challenge=Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M; wd=360x720; rur=RVA%2C17841477255723112%2C1787962739%3A01ff0e558a6050b70a6cb83eb1330ae9504f51ebf78dff7155af95e5ac0f10be4a0384f5',
+    'origin': 'https://www.instagram.com',
+    'referer': 'https://www.instagram.com/sedra_24_1_2007/',
+    'sec-ch-prefers-color-scheme': 'dark',
+    'sec-ch-ua': '"Chromium";v="139", "Not;A=Brand";v="99"',
+    'sec-ch-ua-full-version-list': '"Chromium";v="139.0.7339.0", "Not;A=Brand";v="99.0.0.0"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-model': '"TECNO CL7"',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua-platform-version': '"14.0.0"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36',
+    'x-asbd-id': '359341',
+    'x-fb-lsd': 'E-myV3Zd0C6Img0LYKoNKr',
+}
+
+params = {
+    '__a': '1',
+    '__ccg': 'POOR',
+    '__comet_req': '7',
+    '__crn': 'comet.igweb.PolarisProfilePostsTabRoute',
+    '__d': 'www',
+    '__hs': '20680.HYP:instagram_web_pkg.2.1...0',
+    '__hsi': '7674041655814947065',
+    '__req': '3r',
+    '__rev': '1045241378',
+    '__s': '5nm26g:nsu4la:4bq0il',
+    '__spin_b': 'trunk',
+    '__spin_r': '1045241378',
+    '__spin_t': '1786752058',
+    '__user': '0',
+    'dpr': '3',
+    'fb_dtsg': 'NAfwqk-64AY8izIAP9WxTQAjTgNjZGHIgMlYJBxICD9nAa_fli6kvWQ:17843691127146670:1786745934',
+    'jazoest': '26237',
+    'lsd': 'E-myV3Zd0C6Img0LYKoNKr',
+    'ph': 'C3',
+}
+
+files = {
+    'ts': (None, '1786753140341'),
+    'post_0': ('blob', 'x\x9cMPÛn\x9b0\x18~\x17_\x03³\x8d\x01\x9b;Ô4ÚA\x93¦uë¤\x86\b\x19Û¥VÀ°ØéB£¼û~\x92M\x8d¸òwæßlÐ³ìÕXÚ®\tv0\x8d\x9f\x8c\v\x8dW{cÜ\x05AÑ\t\x19T¢S\x8d¤\nvt5*k´È}ã\x8d÷\x804Æé\x1aE5ÒæÕ*sënÚùÿsgf°B\x8cï\x8d\x99\x9aaÔÀö£ÚY×ýÓ\\y\x8ai\x1ec\x1e\x93\fÞø|\x86`oÔè4\x14Z\aù\x83ÕÎv/á²\x84\x10\x91\x8aKûÒ÷6:s\x81+oå\x87J/\x99@\x1d¼ì`×5\x05ø\x8c§\x80þ1f×Ï·s\x81Úàèý\x03Ýö\x8c"´G%\x89\x90\x863Üó\x94°j-âÕ\x1d\x151[\x89<æ$Ëã\x8aq"ðZ0\x96a0x\x90fn\xa0yW:\x7f`½,Yû\x1bÛ\x1e¨\x00Y\x05Ï\x8b,%©H\x8b"a\x18C¸\x04\aIp²¸[\x98A"Bù6B\x16ZOHNÓ\x83\x1a\'£?Á/\x05\x1bfP\x17\x05¥Là\x14zÁ£zi\a@_\x06©\x9a\x10úäZBqÆ\x93ê;¹[\x7fûÕùvþ¡ôáçñcõùíéþ\x91¼ê}\x16O,¬ÒÃ\x97ck\x8fO\x9c>|Í1\x82£ßnä\tY\x8e\x81Évû\x17h¹«\xad', 'application/octet-stream'),
+    'q': (None, '[{"app_id":"1217981644879628","posts":"0","user":"17841477255723112","webSessionId":"5nm26g:nsu4la:4bq0il","trigger":"falco:instagram_web_time_spent_bit_array","send_method":"ajax","compression":"deflate","snappy_ms":44}]'),
+}
+
+response = requests.post('https://www.instagram.com/ajax/bz', params=params, cookies=cookies, headers=headers, files=files)
+
+
+cookies = {
+    'ig_did': 'E8314AF9-DC29-4D96-8156-A48190F94450',
+    'datr': 'hZJ_asIWPxeRCWBvLRXiQ-PU',
+    'dpr': '3',
+    'mid': 'an-ShQABAAHKgVjqhW49mC2ihV7a',
+    'csrftoken': 'b9vhwL1lit6wsELuEWR9WfFDii1GqKKu',
+    'ds_user_id': '77224903190',
+    'sessionid': '77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA',
+    'rd_challenge': 'Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M',
+    'wd': '360x720',
+    'rur': 'RVA%2C17841477255723112%2C1787962739%3A01ff0e558a6050b70a6cb83eb1330ae9504f51ebf78dff7155af95e5ac0f10be4a0384f5',
+}
+
+headers = {
+    'authority': 'www.instagram.com',
+    'accept': '*/*',
+    'accept-language': 'ar-EG,ar-MA;q=0.9,ar;q=0.8,en-US;q=0.7,en;q=0.6',
+    'content-type': 'multipart/form-data; boundary=----WebKitFormBoundaryU5mdjIlscKOQRwn8',
+    # 'cookie': 'ig_did=E8314AF9-DC29-4D96-8156-A48190F94450; datr=hZJ_asIWPxeRCWBvLRXiQ-PU; dpr=3; mid=an-ShQABAAHKgVjqhW49mC2ihV7a; csrftoken=b9vhwL1lit6wsELuEWR9WfFDii1GqKKu; ds_user_id=77224903190; sessionid=77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA; rd_challenge=Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M; wd=360x720; rur=RVA%2C17841477255723112%2C1787962739%3A01ff0e558a6050b70a6cb83eb1330ae9504f51ebf78dff7155af95e5ac0f10be4a0384f5',
+    'origin': 'https://www.instagram.com',
+    'referer': 'https://www.instagram.com/sedra_24_1_2007/',
+    'sec-ch-prefers-color-scheme': 'dark',
+    'sec-ch-ua': '"Chromium";v="139", "Not;A=Brand";v="99"',
+    'sec-ch-ua-full-version-list': '"Chromium";v="139.0.7339.0", "Not;A=Brand";v="99.0.0.0"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-model': '"TECNO CL7"',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua-platform-version': '"14.0.0"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36',
+    'x-asbd-id': '359341',
+    'x-fb-lsd': 'E-myV3Zd0C6Img0LYKoNKr',
+}
+
+params = {
+    '__a': '1',
+    '__ccg': 'POOR',
+    '__comet_req': '7',
+    '__crn': 'comet.igweb.PolarisProfilePostsTabRoute',
+    '__d': 'www',
+    '__hs': '20680.HYP:instagram_web_pkg.2.1...0',
+    '__hsi': '7674041655814947065',
+    '__req': '3s',
+    '__rev': '1045241378',
+    '__s': '5nm26g:nsu4la:4bq0il',
+    '__spin_b': 'trunk',
+    '__spin_r': '1045241378',
+    '__spin_t': '1786752058',
+    '__user': '0',
+    'dpr': '3',
+    'fb_dtsg': 'NAfwqk-64AY8izIAP9WxTQAjTgNjZGHIgMlYJBxICD9nAa_fli6kvWQ:17843691127146670:1786745934',
+    'jazoest': '26237',
+    'lsd': 'E-myV3Zd0C6Img0LYKoNKr',
+    'ph': 'C3',
+}
+
+files = {
+    'ts': (None, '1786753141540'),
+    'post_0': ('blob', 'x\x9cmR]OÛ0\x14ý/~N+Çq\x12§oQ[\x18Û\x98P)\x9b\x04\xad"7q[\x8bÄ\x0e¶Ãè\x10ÿ}×NÙ\x98´7ûÜ{Î¹_\x0f\x0fhÏÛZÏzaö(zE\x02ÍÐë\x06uÜ<\nSÉf\x83f9Î2FpÎ¢\râµ\x93Z\x8d8\x81¿TÖqU\x8b\x11Á\x80XÞõ\xad¨\fw\x02\x90\x18\x90N¸£öá\r2\\5º«B\x8eT\x87\r\x82p3@®\x17U6äÄ\x19Æ¸`!Ök©\x9c\x87\x1f¶£\x10o¸ãð\x87\x12y\x0f\x1aõHå\x8a·\'\'k;\x86\x9cìDe¥¯ë©o«N7\x03\x94$\x95t¾$Ìp\x92ã)\x03\x1bÊ\x18añ[Ðî´9UÐ\x8d{\x17Ñ\x8e\x03Wtðe)+\x8a\x84¦\x05ñ¹J¸\x9fÚ<~LnôO\x05\x1d=Bþ\x81ïd\x80ÉÇÔaçN½\b\rÒ±oã\\ÕÙP\x10öªV:á»\x83:÷zT\xad[)\x94«úÁ\x1e«þÈíÈ\x9f\'\x81\x7f\x0e\x1añ,-Ì \bÑ\x94Ð8\t\x9b²Â<Ã\x06ÿ\x1böv\xad®y\x18Ê»Ù\b\x04\anªr\x15L¤]\xad¿zî[\x18Òx\x15çNün÷-?Øó\x9b+\x05#óû8\x0få|,\x7f\x1a¿»Y\x94ëeU^^®\x96\x97þu;_-\x97ßªõÕõr\x83¼A\xadÕ^\x1eþ2zã\x0fç\rEÈx\x0fÔÀu.Y\x12Óò¢\x98,æ¤\x98ÐE\x91MX\x9cf\x93\x92²¸À\x17\x05¥)\x06\x82\x85ÔTu$;Ì\x94\x1dhËgt÷\x84e\v!\aZ9Ëò\x14\x84p\x82é\x94`L"Ä\x81\x11OñÔ³wprq\x14\x13¶\x8d\x90\x04×W\x7fn·µîEsÕÀØ¥;Av\x9e\x13B\v\x9c\x80/pê\x96Ë\x0eÐcÇëÊ¹v:\x9a\x10\x9c²i¹\x8aç\x177?\x0evwZ×Íp÷ò©üüë~ù=~nL:é©[$Ã\x97\x97\x9d|¹gäö:Ã\bæýo\x8di\x84£\x02³íö7õJ*$', 'application/octet-stream'),
+    'q': (None, '[{"app_id":"1217981644879628","posts":"0","user":"17841477255723112","webSessionId":"5nm26g:nsu4la:4bq0il","trigger":"falco:perf","send_method":"ajax","compression":"deflate","snappy_ms":9}]'),
+}
+
+response = requests.post('https://www.instagram.com/ajax/bz', params=params, cookies=cookies, headers=headers, files=files)
+
+
+cookies = {
+    'ig_did': 'E8314AF9-DC29-4D96-8156-A48190F94450',
+    'datr': 'hZJ_asIWPxeRCWBvLRXiQ-PU',
+    'dpr': '3',
+    'mid': 'an-ShQABAAHKgVjqhW49mC2ihV7a',
+    'csrftoken': 'b9vhwL1lit6wsELuEWR9WfFDii1GqKKu',
+    'ds_user_id': '77224903190',
+    'sessionid': '77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA',
+    'rd_challenge': 'Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M',
+    'wd': '360x720',
+    'rur': 'RVA%2C17841477255723112%2C1787962739%3A01ff0e558a6050b70a6cb83eb1330ae9504f51ebf78dff7155af95e5ac0f10be4a0384f5',
+}
+
+headers = {
+    'authority': 'www.instagram.com',
+    'accept': '*/*',
+    'accept-language': 'ar-EG,ar-MA;q=0.9,ar;q=0.8,en-US;q=0.7,en;q=0.6',
+    # 'cookie': 'ig_did=E8314AF9-DC29-4D96-8156-A48190F94450; datr=hZJ_asIWPxeRCWBvLRXiQ-PU; dpr=3; mid=an-ShQABAAHKgVjqhW49mC2ihV7a; csrftoken=b9vhwL1lit6wsELuEWR9WfFDii1GqKKu; ds_user_id=77224903190; sessionid=77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA; rd_challenge=Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M; wd=360x720; rur=RVA%2C17841477255723112%2C1787962739%3A01ff0e558a6050b70a6cb83eb1330ae9504f51ebf78dff7155af95e5ac0f10be4a0384f5',
+    'referer': 'https://www.instagram.com/sedra_24_1_2007/',
+    'sec-ch-prefers-color-scheme': 'dark',
+    'sec-ch-ua': '"Chromium";v="139", "Not;A=Brand";v="99"',
+    'sec-ch-ua-full-version-list': '"Chromium";v="139.0.7339.0", "Not;A=Brand";v="99.0.0.0"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-model': '"TECNO CL7"',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua-platform-version': '"14.0.0"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36',
+    'x-asbd-id': '359341',
+    'x-csrftoken': 'b9vhwL1lit6wsELuEWR9WfFDii1GqKKu',
+    'x-ig-app-id': '1217981644879628',
+    'x-ig-max-touch-points': '5',
+    'x-ig-www-claim': 'hmac.AR2vwrK6N6-zvgoKYwbfyergLzG_bzNaSKamXrL2z1M_qjku',
+    'x-requested-with': 'XMLHttpRequest',
+    'x-web-session-id': '5nm26g:nsu4la:4bq0il',
+}
+
+params = {
+    'timezone_offset': '10800',
+}
+
+response = requests.get(
+    'https://www.instagram.com/api/v1/mental_well_being/get_aggregated_screen_time_by_device/',
+    params=params,
+    cookies=cookies,
+    headers=headers,
+)
+
+
+cookies = {
+    'ig_did': 'E8314AF9-DC29-4D96-8156-A48190F94450',
+    'datr': 'hZJ_asIWPxeRCWBvLRXiQ-PU',
+    'dpr': '3',
+    'mid': 'an-ShQABAAHKgVjqhW49mC2ihV7a',
+    'csrftoken': 'b9vhwL1lit6wsELuEWR9WfFDii1GqKKu',
+    'ds_user_id': '77224903190',
+    'sessionid': '77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA',
+    'rd_challenge': 'Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M',
+    'wd': '360x720',
+    'rur': 'RVA%2C17841477255723112%2C1787962739%3A01ff0e558a6050b70a6cb83eb1330ae9504f51ebf78dff7155af95e5ac0f10be4a0384f5',
+}
+
+headers = {
+    'authority': 'www.instagram.com',
+    'accept': '*/*',
+    'accept-language': 'ar-EG,ar-MA;q=0.9,ar;q=0.8,en-US;q=0.7,en;q=0.6',
+    'content-type': 'application/x-www-form-urlencoded',
+    # 'cookie': 'ig_did=E8314AF9-DC29-4D96-8156-A48190F94450; datr=hZJ_asIWPxeRCWBvLRXiQ-PU; dpr=3; mid=an-ShQABAAHKgVjqhW49mC2ihV7a; csrftoken=b9vhwL1lit6wsELuEWR9WfFDii1GqKKu; ds_user_id=77224903190; sessionid=77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA; rd_challenge=Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M; wd=360x720; rur=RVA%2C17841477255723112%2C1787962739%3A01ff0e558a6050b70a6cb83eb1330ae9504f51ebf78dff7155af95e5ac0f10be4a0384f5',
+    'origin': 'https://www.instagram.com',
+    'referer': 'https://www.instagram.com/sedra_24_1_2007/',
+    'sec-ch-prefers-color-scheme': 'dark',
+    'sec-ch-ua': '"Chromium";v="139", "Not;A=Brand";v="99"',
+    'sec-ch-ua-full-version-list': '"Chromium";v="139.0.7339.0", "Not;A=Brand";v="99.0.0.0"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-model': '"TECNO CL7"',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua-platform-version': '"14.0.0"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36',
+    'x-asbd-id': '359341',
+    'x-csrftoken': 'b9vhwL1lit6wsELuEWR9WfFDii1GqKKu',
+    'x-fb-friendly-name': 'PolarisScreenTimeTrackingAndEnforcement_QuietModeQuery',
+    'x-fb-lsd': 'E-myV3Zd0C6Img0LYKoNKr',
+    'x-ig-app-id': '1217981644879628',
+    'x-ig-max-touch-points': '5',
+}
+
+data = {
+    'av': '17841477255723112',
+    '__d': 'www',
+    '__user': '0',
+    '__a': '1',
+    '__req': '3t',
+    '__hs': '20680.HYP:instagram_web_pkg.2.1...0',
+    'dpr': '3',
+    '__ccg': 'POOR',
+    '__rev': '1045241378',
+    '__s': '5nm26g:nsu4la:4bq0il',
+    '__hsi': '7674041655814947065',
+    '__dyn': '7xeUjG1mxu1syaxG4Vp41twpUnwgU7SbzEdF8vyUco2qwJyEiw50x609vCwjE1EEc87m0yE462mcw5Mx62G5UswoEcE7O2l0Fwqo5W1yw9O1lwlE-U2zxe2GewGw9a361qw8Xxm16wa-0raazo7u3C2u2J0bS1LyUaUbGxK0PE8oC1IwjUpwlAcwBwUQp1yU426V8aUuwm8jwsE2xyVrx60hK3KawOCwgo4q2i1cweW3mdg5e',
+    '__csr': 'gmR7ggiNcpOEBl4P8WCNYnxmVbcoRdjVbv4lb8_l4ip4D9nAiN7F4SjGhx0DbXbnSTBBB-ShHcmFtd2OcCqxiylJnaialeXHQCtCKieCZ29KWOlGiXCGmVkVHXFqy8x6AG5axKEyp5DJnAA-aK9y8bVudxryu4V8hQnK8KQ5qAAF9kU9UShyUxpE-dK5V8hzUCl5xq8ykaV98GqiU8V8y368yWgLCABVenyU5u06No01k-8ao0UEyxd0Ewcuu024m04FJw920MV40CqwZw5Pqxd1omC0gy0aTwNx2ag422N0iSm8hpqO0Swt828ye6i7w2Y8mwfOi014qw1qe07DGwde6k480VtwhP1q06hE0Lm',
+    '__hsdp': 'ga46IkAwjhvgzemQA8JiFJ8F916ISyPYe2OCgqhAczu9C41B6zUbE8byUS5qgG1ta8wxw9S0w8xkSfwcq0hO4U5G0Ro3Tw9e3u0NEdk1Bw0zrwcy068o1yo1580R-2y0im2K0a2g0k5wno8E',
+    '__hblp': '0CxW1uwOzoao-5UqxN0zBK68K2taU-2O2aUgxe9iHDxZa3uFE98GuGDxF29EO9wWG5pE524ExeiXJ3-bwEwxzoF6wPAK788EboGt1612CAxqUuxeK4oqy9Unxm3G1OAV9ocGK18xqdg4Pxq1UK17BwzGazU4yE8A8xC3-8K2Ki0qC0B-0-E4Z04aBAwpK6o6q14who0HK0MpEe80g0w6JwVwmo2xw8S18xm3W2e1ixK7y2aDxe2O0xU0Ai2y0GE6C48a-3u08Dwwgpw4ow7Eg6m0w8bU8e1owlkq7UdoqDK1Xwi82uwDwXwi8-EgwWl0',
+    '__sjsp': 'ga46IkADMghvgzemQA8JiFJ8F916ISyPYe2OCxJ6gOdx8g6kqfwKwwKbzolF2E668w5hw2p8',
+    '__comet_req': '7',
+    'fb_dtsg': 'NAfwqk-64AY8izIAP9WxTQAjTgNjZGHIgMlYJBxICD9nAa_fli6kvWQ:17843691127146670:1786745934',
+    'jazoest': '26237',
+    'lsd': 'E-myV3Zd0C6Img0LYKoNKr',
+    '__spin_r': '1045241378',
+    '__spin_b': 'trunk',
+    '__spin_t': '1786752058',
+    '__crn': 'comet.igweb.PolarisProfilePostsTabRoute',
+    'fb_api_caller_class': 'RelayModern',
+    'fb_api_req_friendly_name': 'PolarisScreenTimeTrackingAndEnforcement_QuietModeQuery',
+    'server_timestamps': 'true',
+    'variables': '{}',
+    'doc_id': '28109775805305232',
+}
+
+response = requests.post('https://www.instagram.com/api/graphql', cookies=cookies, headers=headers, data=data)
+
+
+cookies = {
+    'ig_did': 'E8314AF9-DC29-4D96-8156-A48190F94450',
+    'datr': 'hZJ_asIWPxeRCWBvLRXiQ-PU',
+    'dpr': '3',
+    'mid': 'an-ShQABAAHKgVjqhW49mC2ihV7a',
+    'csrftoken': 'b9vhwL1lit6wsELuEWR9WfFDii1GqKKu',
+    'ds_user_id': '77224903190',
+    'sessionid': '77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA',
+    'rd_challenge': 'Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M',
+    'wd': '360x720',
+    'rur': '"CLN\\05477224903190\\0541818289145:01ff64f187681ae3d04198141455130f100721969af75886625bacaa6d1e1ea0c25cb93c"',
+}
+
+headers = {
+    'authority': 'www.instagram.com',
+    'accept': '*/*',
+    'accept-language': 'ar-EG,ar-MA;q=0.9,ar;q=0.8,en-US;q=0.7,en;q=0.6',
+    # 'cookie': 'ig_did=E8314AF9-DC29-4D96-8156-A48190F94450; datr=hZJ_asIWPxeRCWBvLRXiQ-PU; dpr=3; mid=an-ShQABAAHKgVjqhW49mC2ihV7a; csrftoken=b9vhwL1lit6wsELuEWR9WfFDii1GqKKu; ds_user_id=77224903190; sessionid=77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA; rd_challenge=Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M; wd=360x720; rur="CLN\\05477224903190\\0541818289145:01ff64f187681ae3d04198141455130f100721969af75886625bacaa6d1e1ea0c25cb93c"',
+    'referer': 'https://www.instagram.com/sedra_24_1_2007/',
+    'sec-ch-prefers-color-scheme': 'dark',
+    'sec-ch-ua': '"Chromium";v="139", "Not;A=Brand";v="99"',
+    'sec-ch-ua-full-version-list': '"Chromium";v="139.0.7339.0", "Not;A=Brand";v="99.0.0.0"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-model': '"TECNO CL7"',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua-platform-version': '"14.0.0"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36',
+    'x-asbd-id': '359341',
+    'x-csrftoken': 'b9vhwL1lit6wsELuEWR9WfFDii1GqKKu',
+    'x-ig-app-id': '1217981644879628',
+    'x-ig-max-touch-points': '5',
+    'x-ig-www-claim': 'hmac.AR2vwrK6N6-zvgoKYwbfyergLzG_bzNaSKamXrL2z1M_qjku',
+    'x-requested-with': 'XMLHttpRequest',
+    'x-web-session-id': '5nm26g:nsu4la:4bq0il',
+}
+
+response = requests.get(
+    'https://www.instagram.com/api/v1/mental_well_being/get_daily_limit_settings/',
+    cookies=cookies,
+    headers=headers,
+)
+
+
+cookies = {
+    'ig_did': 'E8314AF9-DC29-4D96-8156-A48190F94450',
+    'datr': 'hZJ_asIWPxeRCWBvLRXiQ-PU',
+    'dpr': '3',
+    'mid': 'an-ShQABAAHKgVjqhW49mC2ihV7a',
+    'csrftoken': 'b9vhwL1lit6wsELuEWR9WfFDii1GqKKu',
+    'ds_user_id': '77224903190',
+    'sessionid': '77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA',
+    'rd_challenge': 'Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M',
+    'wd': '360x720',
+    'rur': 'RVA%2C17841477255723112%2C1787962745%3A01ff5b9f18d34ce208fa840f3994c2410ef16f12daedc96348e0504721369fd85dfabd54',
+}
+
+headers = {
+    'authority': 'www.instagram.com',
+    'accept': '*/*',
+    'accept-language': 'ar-EG,ar-MA;q=0.9,ar;q=0.8,en-US;q=0.7,en;q=0.6',
+    'content-type': 'application/x-www-form-urlencoded',
+    # 'cookie': 'ig_did=E8314AF9-DC29-4D96-8156-A48190F94450; datr=hZJ_asIWPxeRCWBvLRXiQ-PU; dpr=3; mid=an-ShQABAAHKgVjqhW49mC2ihV7a; csrftoken=b9vhwL1lit6wsELuEWR9WfFDii1GqKKu; ds_user_id=77224903190; sessionid=77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA; rd_challenge=Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M; wd=360x720; rur=RVA%2C17841477255723112%2C1787962745%3A01ff5b9f18d34ce208fa840f3994c2410ef16f12daedc96348e0504721369fd85dfabd54',
+    'origin': 'https://www.instagram.com',
+    'referer': 'https://www.instagram.com/sedra_24_1_2007/',
+    'sec-ch-prefers-color-scheme': 'dark',
+    'sec-ch-ua': '"Chromium";v="139", "Not;A=Brand";v="99"',
+    'sec-ch-ua-full-version-list': '"Chromium";v="139.0.7339.0", "Not;A=Brand";v="99.0.0.0"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-model': '"TECNO CL7"',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua-platform-version': '"14.0.0"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36',
+    'x-asbd-id': '359341',
+    'x-csrftoken': 'b9vhwL1lit6wsELuEWR9WfFDii1GqKKu',
+    'x-fb-friendly-name': 'PolarisScreenTimeTrackingAndEnforcement_UpdateLastSeenTimezoneMutation',
+    'x-fb-lsd': 'E-myV3Zd0C6Img0LYKoNKr',
+    'x-ig-app-id': '1217981644879628',
+    'x-ig-max-touch-points': '5',
+}
+
+data = {
+    'av': '17841477255723112',
+    '__d': 'www',
+    '__user': '0',
+    '__a': '1',
+    '__req': '3u',
+    '__hs': '20680.HYP:instagram_web_pkg.2.1...0',
+    'dpr': '3',
+    '__ccg': 'POOR',
+    '__rev': '1045241378',
+    '__s': '5nm26g:nsu4la:4bq0il',
+    '__hsi': '7674041655814947065',
+    '__dyn': '7xeUjG1mxu1syaxG4Vp41twpUnwgU7SbzEdF8vyUco2qwJyEiw50x609vCwjE1EEc87m0yE462mcw5Mx62G5UswoEcE7O2l0Fwqo5W1yw9O1lwlE-U2zxe2GewGw9a361qw8Xxm16wa-0raazo7u3C2u2J0bS1LyUaUbGxK0PE8oC1IwjUpwlAcwBwUQp1yU426V8aUuwm8jwsE2xyVrx60hK3KawOCwgo4q2i1cweW3mdg5e',
+    '__csr': 'gmR7ggiNcpOEBl4P8WCNYnxmVbcoRdjVbv4lb8_l4ip4D9nAiN7F4SjGhx0DbXbnSTBBB-ShHcmFtd2OcCqxiylJnaialeXHQCtCKieCZ29KWOlGiXCGmVkVHXFqy8x6AG5axKEyp5DJnAA-aK9y8bVudxryu4V8hQnK8KQ5qAAF9kU9UShyUxpE-dK5V8hzUCl5xq8ykaV98GqiU8V8y368yWgLCABVenyU5u06No01k-8ao0UEyxd0Ewcuu024m04FJw920MV40CqwZw5Pqxd1omC0gy0aTwNx2ag422N0iSm8hpqO0Swt828ye6i7w2Y8mwfOi014qw1qe07DGwde6k480VtwhP1q06hE0Lm',
+    '__hsdp': 'ga46IkAwjhvgzemQA8JiFJ8F916ISyPYe2OCgqhAczu9C41B6zUbE8byUS5qgG1ta8wxw9S0w8xkSfwcq0hO4U5G0Ro3Tw9e3u0NEdk1Bw0zrwcy068o1yo1580R-2y0im2K0a2g0k5wno8E',
+    '__hblp': '0CxW1uwOzoao-5UqxN0zBK68K2taU-2O2aUgxe9iHDxZa3uFE98GuGDxF29EO9wWG5pE524ExeiXJ3-bwEwxzoF6wPAK788EboGt1612CAxqUuxeK4oqy9Unxm3G1OAV9ocGK18xqdg4Pxq1UK17BwzGazU4yE8A8xC3-8K2Ki0qC0B-0-E4Z04aBAwpK6o6q14who0HK0MpEe80g0w6JwVwmo2xw8S18xm3W2e1ixK7y2aDxe2O0xU0Ai2y0GE6C48a-3u08Dwwgpw4ow7Eg6m0w8bU8e1owlkq7UdoqDK1Xwi82uwDwXwi8-EgwWl0',
+    '__sjsp': 'ga46IkADMghvgzemQA8JiFJ8F916ISyPYe2OCxJ6gOdx8g6kqfwKwwKbzolF2E668w5hw2p8',
+    '__comet_req': '7',
+    'fb_dtsg': 'NAfwqk-64AY8izIAP9WxTQAjTgNjZGHIgMlYJBxICD9nAa_fli6kvWQ:17843691127146670:1786745934',
+    'jazoest': '26237',
+    'lsd': 'E-myV3Zd0C6Img0LYKoNKr',
+    '__spin_r': '1045241378',
+    '__spin_b': 'trunk',
+    '__spin_t': '1786752058',
+    '__crn': 'comet.igweb.PolarisProfilePostsTabRoute',
+    'fb_api_caller_class': 'RelayModern',
+    'fb_api_req_friendly_name': 'PolarisScreenTimeTrackingAndEnforcement_UpdateLastSeenTimezoneMutation',
+    'server_timestamps': 'true',
+    'variables': '{"input":{"actor_id":"17841477255723112","client_mutation_id":"6","last_seen_timezone":"Asia/Aden"}}',
+    'doc_id': '27211633268499549',
+}
+
+response = requests.post('https://www.instagram.com/api/graphql', cookies=cookies, headers=headers, data=data)
+
+
+cookies = {
+    'ig_did': 'E8314AF9-DC29-4D96-8156-A48190F94450',
+    'datr': 'hZJ_asIWPxeRCWBvLRXiQ-PU',
+    'dpr': '3',
+    'mid': 'an-ShQABAAHKgVjqhW49mC2ihV7a',
+    'csrftoken': 'b9vhwL1lit6wsELuEWR9WfFDii1GqKKu',
+    'ds_user_id': '77224903190',
+    'sessionid': '77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA',
+    'rd_challenge': 'Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M',
+    'wd': '360x720',
+    'rur': 'RVA%2C17841477255723112%2C1787962745%3A01ff5b9f18d34ce208fa840f3994c2410ef16f12daedc96348e0504721369fd85dfaef12',
+}
+
+headers = {
+    'authority': 'www.instagram.com',
+    'accept': '*/*',
+    'accept-language': 'ar-EG,ar-MA;q=0.9,ar;q=0.8,en-US;q=0.7,en;q=0.6',
+    'content-type': 'multipart/form-data; boundary=----WebKitFormBoundary32xdiiL01hmJmmYo',
+    # 'cookie': 'ig_did=E8314AF9-DC29-4D96-8156-A48190F94450; datr=hZJ_asIWPxeRCWBvLRXiQ-PU; dpr=3; mid=an-ShQABAAHKgVjqhW49mC2ihV7a; csrftoken=b9vhwL1lit6wsELuEWR9WfFDii1GqKKu; ds_user_id=77224903190; sessionid=77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA; rd_challenge=Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M; wd=360x720; rur=RVA%2C17841477255723112%2C1787962745%3A01ff5b9f18d34ce208fa840f3994c2410ef16f12daedc96348e0504721369fd85dfaef12',
+    'origin': 'https://www.instagram.com',
+    'referer': 'https://www.instagram.com/sedra_24_1_2007/',
+    'sec-ch-prefers-color-scheme': 'dark',
+    'sec-ch-ua': '"Chromium";v="139", "Not;A=Brand";v="99"',
+    'sec-ch-ua-full-version-list': '"Chromium";v="139.0.7339.0", "Not;A=Brand";v="99.0.0.0"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-model': '"TECNO CL7"',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua-platform-version': '"14.0.0"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36',
+    'x-asbd-id': '359341',
+    'x-fb-lsd': 'E-myV3Zd0C6Img0LYKoNKr',
+}
+
+params = {
+    '__a': '1',
+    '__ccg': 'POOR',
+    '__comet_req': '7',
+    '__crn': 'comet.igweb.PolarisProfilePostsTabRoute',
+    '__d': 'www',
+    '__hs': '20680.HYP:instagram_web_pkg.2.1...0',
+    '__hsi': '7674041655814947065',
+    '__req': '3v',
+    '__rev': '1045241378',
+    '__s': '5nm26g:nsu4la:4bq0il',
+    '__spin_b': 'trunk',
+    '__spin_r': '1045241378',
+    '__spin_t': '1786752058',
+    '__user': '0',
+    'dpr': '3',
+    'fb_dtsg': 'NAfwqk-64AY8izIAP9WxTQAjTgNjZGHIgMlYJBxICD9nAa_fli6kvWQ:17843691127146670:1786745934',
+    'jazoest': '26237',
+    'lsd': 'E-myV3Zd0C6Img0LYKoNKr',
+    'ph': 'C3',
+}
+
+files = {
+    'ts': (None, '1786753146204'),
+    'post_0': ('blob', 'x\x9cíX[WÛ8\x10þ/~\x0eÆr|Í[\x16\x02Ën»Í\tévO\x81££Ø\x8a£Å7$9!åðßw$Ù\x10 Pº»iyhyh4\x9a\x9bfæ\x1b\x8d|vfÍI\x9eT\x03V\nI2N\n¼¢3,YA±¨i)ñ\x8cIL8\'k«wcQk`Ý\x9c[,Ã\x8d\xa0\x9c¥çÖàÜ\nC×õb§\x8fbçÜê\x9d[õåV2¯ò¼j$^\x10±Ð\fÈñ|×Cý0Òû\x15g\x19+I\x8e9\x9dSÎ)\a¦²Éóm[8\xad\nÂJ\xadÆ(¿\x979·öéu\x9dW\x9cî\vJx²Ø\x7fÀ±)ºZ\xadì»\x83ÛIU<älx®Ù\x16RÖb°¿ÿ\x84}«¡N\n\x88)\'Øõ0Â®ã\x84f·$K\x9c,:\aÆUN8\x13#£fRUrÐª<Õ\x1aÇ$£\x034X2\x82\x93*O1Øæ²×J\x8dy5g9\x1dWB\x8a)\x99iéº¥)9wÐ\x94\xa0\x8d&\x92¦Ú6©kÜæ\f¹(\x8c#\x14x^\x14Æ\x81k20çU)i\x99bZ.5×A_ÓµU]\x13@Ea\x14\x84~\x1fy>ìÈJ\x98â\x80\x8d3Ôs.ZZÒ@(\a¾Û.[£ÞìÊa¹V©¨9UA@íJÐ+µr`\x99WÙSkPFÊ\x15\x96bNVZ\x9d_\x16n\x90\rJÑx9\x19tÊo\xad\x9eÅ\x95Z+\x85b\x1dE ;<\x8a÷\x0e\x0fÜxÏ;\x8c\x83½\bùÁÞÐ\x8b@áQìy¾\x03\x02\x02X·©\x83-ùÐ\tdû=\x8b\x00;²\x1d[\x89ÎôÉ\x91\x1b]ô,\x06&oT\x98O\x93ª¦éI\n\x00br\rÜ\x1b`\x00\x99$\'¬\x00ê¢ \t\x962·\x8d\x05×ñ#{8A\aGãO\x99\x98\xad§IÚ|¼þuøÛ\x97Ï£?Ñ2åþ^íÉÃ~óûõ\x8c]\x7f\x8eÜÓ÷\x81cÝÞö\x1e:\x18ô\x9c^ìB.:l×\x94Ï7Ð[\x10~\tÕ\xad\x93\x12:A\x10\x05¾¯²@\x12ÉªÒÐUæt©\x97\t5\x14\x1d}RÔ9\x85\x04HÚf®\xa0rQ\x99ìrR\x02´°æae¦Ó\x9c6À«\x94\x96Â\x94]\x1cÇ>2]¢b¥TÔ³\v£\x87¤D\x12XßèBÍYb$\tà~-Y"Ì\x96éLL¹uUç¸¨Ò\x06<b%\x93ºz"?\x0e\x9c[\xad°¨øZ\x01Fv\x92\x95\x84\x0e\x02tXF~\x14Ç}Ï\x8f]Å[R¹ªøå&sZ\xadJ8Å%ðg\x04Z\xa0hcrÇÚÌäº¦¦¬ÍY¹\x94¸\x10Ú\ví\x81`\x80;8\x1287¯\x8cÖ$gª¥Ö\x8dXà\x1aú ÝDY»Éé\x92\t8¸VÔ5H¥\x8eò%dmëö\xad\x06MBt$:c\x86\xa0-\x10\x8e\x87\x13m\x84\x89Éô\x9d\x92½ÕA2\x95Ð\x9eDås\x9e\x93L´¿IYBÈT\x12º\br\x92@»\x81Ô¬µÚÚô!{£é\x00þ\x1eJBP9TÃ]\x97¸Q\'É¡\'U\\\'\x1f\x96\t§´\x9cB^íû\x9f\'Ð\x88ø\x92ä§ªõ(\x02ä¦¨Ï\xad\v¥>©Ê9\\Aw\t\x00ûé\x8e\x81\x1fÅÞ[\x86=¸g{\x8e\x83\x14òÃðõÈw\x1d][ß\x01ù}ßQÿv\f}÷\'ôw\x03ý¶Bî\x0eþq|8\x9c\x8eððøx2:V¿N\x0f&£Ñ\x1fxzò~dzÀ\x0f\x01©o\x87\x8eã¾m¤úvl\x90\x1aÅo\x12©ÁÎïèÀ\tû¶1\x83B\x14ÿÄì÷ÁìÑä/üiô\v\x9e\x8cÆ\x1f&Óö¿\x93?\x8eñû\x0f\x87ÃwøàÝ\x87ÓÑá\x8f\x02o\x00/$\x1b½aäj\a]Õ]à\x8eEý{äV©Ðoæ\x19\x91Éb\x03Âzm2Ñ\x87úm\v5[ifS=mæY¶\x90ðØ¦©}xüi\f¸¤ÜV\x18R¯å9ã@çTÐ\x96»{3¥íóX\x17Ó\v\x1aì\x92®Ú\x9fß¨àß\x18Õ2_7©Ë9Daßìë\\2*ìù\x1cÿ\xad£i\x7fý{\x84ýø\rk#û\xa0S¸\x04V\x1bÞ\x91\x99zúv.¸\x8fN`¸\x14\x04í\x06\x1eÝ$Å¦UÚ3R~!LÉcV\x144eÐLóõ«\x14m\x17íô\x03\x8e\x12*\x84n½/+3\x02_÷>!µlø³|\x9aqKt³Í\x90\x9a±[S¾=¨\x8fËbk,^:ÿv\x05OÏ¿\x9dïéùÑ+Î¯nÛÿõ¨ßV?¯\x8aÙkëg·ñS\x9c\x10¤¶}\xad\nf·÷¸n\\s\x9a¬\x13¸ÆÔULí\x83\x05M._ôí±Ä\x10®¨%}Ööí\x8e?æ¸f\x14{»\x97\x0eøØ·Õ¬\x88\x02gãÊy\x16¾\x1b×\x8f¹ýõí\xadØÕ\a6¡&\x11ó\rÑL~0\x9cÀ\x8c¶!\x8fgënyI»çzNi\xad\x868Ø\x85!E%¸å1û®ã\x06{N´\x87|5\x81ê\x82\x11\x14\x06\b¸\x16Í\fX°´Tw\x85ö\x05¡ØóÍ\'@°÷¥*Í\x801\x14\x8cì\x0fS¥S}B\x15$\x03¿\x8c\x16Ø\x0f\x90jj+J/óõ¦»j2uz÷\x7fÀw±Ó\x92ñ\x1dõyí\r×\x8bïÜ}\b\x80\a÷s\x15cjã¥bij\x98\x85)Î\x89\x80úêÂ\xad²\x85ïæÞ«\x86\nSGÿ)Ý»ÍWèÛý7\x9d/p0\x82dõCÿââ\x1fi,%Ô', 'application/octet-stream'),
+    'q': (None, '[{"app_id":"1217981644879628","posts":"0","user":"17841477255723112","webSessionId":"5nm26g:nsu4la:4bq0il","trigger":"falco:instagram_web_time_spent_bit_array","send_method":"ajax","compression":"deflate","snappy_ms":14}]'),
+}
+
+response = requests.post('https://www.instagram.com/ajax/bz', params=params, cookies=cookies, headers=headers, files=files)
+
+
+cookies = {
+    'ig_did': 'E8314AF9-DC29-4D96-8156-A48190F94450',
+    'datr': 'hZJ_asIWPxeRCWBvLRXiQ-PU',
+    'dpr': '3',
+    'mid': 'an-ShQABAAHKgVjqhW49mC2ihV7a',
+    'csrftoken': 'b9vhwL1lit6wsELuEWR9WfFDii1GqKKu',
+    'ds_user_id': '77224903190',
+    'sessionid': '77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA',
+    'rd_challenge': 'Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M',
+    'wd': '360x720',
+    'rur': 'RVA%2C17841477255723112%2C1787962745%3A01ff5b9f18d34ce208fa840f3994c2410ef16f12daedc96348e0504721369fd85dfaef12',
+}
+
+headers = {
+    'authority': 'www.instagram.com',
+    'accept': '*/*',
+    'accept-language': 'ar-EG,ar-MA;q=0.9,ar;q=0.8,en-US;q=0.7,en;q=0.6',
+    # 'cookie': 'ig_did=E8314AF9-DC29-4D96-8156-A48190F94450; datr=hZJ_asIWPxeRCWBvLRXiQ-PU; dpr=3; mid=an-ShQABAAHKgVjqhW49mC2ihV7a; csrftoken=b9vhwL1lit6wsELuEWR9WfFDii1GqKKu; ds_user_id=77224903190; sessionid=77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA; rd_challenge=Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M; wd=360x720; rur=RVA%2C17841477255723112%2C1787962745%3A01ff5b9f18d34ce208fa840f3994c2410ef16f12daedc96348e0504721369fd85dfaef12',
+    'referer': 'https://www.instagram.com/sedra_24_1_2007/',
+    'sec-ch-prefers-color-scheme': 'dark',
+    'sec-ch-ua': '"Chromium";v="139", "Not;A=Brand";v="99"',
+    'sec-ch-ua-full-version-list': '"Chromium";v="139.0.7339.0", "Not;A=Brand";v="99.0.0.0"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-model': '"TECNO CL7"',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua-platform-version': '"14.0.0"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36',
+    'x-asbd-id': '359341',
+    'x-csrftoken': 'b9vhwL1lit6wsELuEWR9WfFDii1GqKKu',
+    'x-ig-app-id': '1217981644879628',
+    'x-ig-max-touch-points': '5',
+    'x-ig-www-claim': 'hmac.AR2vwrK6N6-zvgoKYwbfyergLzG_bzNaSKamXrL2z1M_qjku',
+    'x-requested-with': 'XMLHttpRequest',
+    'x-web-session-id': '5nm26g:nsu4la:4bq0il',
+}
+
+params = {
+    'timezone_offset': '10800',
+}
+
+response = requests.get(
+    'https://www.instagram.com/api/v1/mental_well_being/get_aggregated_screen_time_by_device/',
+    params=params,
+    cookies=cookies,
+    headers=headers,
+)
+
+
+cookies = {
+    'ig_did': 'E8314AF9-DC29-4D96-8156-A48190F94450',
+    'datr': 'hZJ_asIWPxeRCWBvLRXiQ-PU',
+    'dpr': '3',
+    'mid': 'an-ShQABAAHKgVjqhW49mC2ihV7a',
+    'csrftoken': 'b9vhwL1lit6wsELuEWR9WfFDii1GqKKu',
+    'ds_user_id': '77224903190',
+    'sessionid': '77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA',
+    'rd_challenge': 'Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M',
+    'wd': '360x720',
+    'rur': '"CLN\\05477224903190\\0541818289147:01ff8d748fe3afddb920ae9e73414e5e23ac193147404a1db964ffeb30ee12dd244abd6d"',
+}
+
+headers = {
+    'authority': 'www.instagram.com',
+    'accept': '*/*',
+    'accept-language': 'ar-EG,ar-MA;q=0.9,ar;q=0.8,en-US;q=0.7,en;q=0.6',
+    'content-type': 'application/json',
+    # 'cookie': 'ig_did=E8314AF9-DC29-4D96-8156-A48190F94450; datr=hZJ_asIWPxeRCWBvLRXiQ-PU; dpr=3; mid=an-ShQABAAHKgVjqhW49mC2ihV7a; csrftoken=b9vhwL1lit6wsELuEWR9WfFDii1GqKKu; ds_user_id=77224903190; sessionid=77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA; rd_challenge=Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M; wd=360x720; rur="CLN\\05477224903190\\0541818289147:01ff8d748fe3afddb920ae9e73414e5e23ac193147404a1db964ffeb30ee12dd244abd6d"',
+    'origin': 'https://www.instagram.com',
+    'referer': 'https://www.instagram.com/sedra_24_1_2007/',
+    'sec-ch-prefers-color-scheme': 'dark',
+    'sec-ch-ua': '"Chromium";v="139", "Not;A=Brand";v="99"',
+    'sec-ch-ua-full-version-list': '"Chromium";v="139.0.7339.0", "Not;A=Brand";v="99.0.0.0"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-model': '"TECNO CL7"',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua-platform-version': '"14.0.0"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36',
+    'x-asbd-id': '359341',
+    'x-csrftoken': 'b9vhwL1lit6wsELuEWR9WfFDii1GqKKu',
+    'x-ig-app-id': '1217981644879628',
+    'x-ig-max-touch-points': '5',
+    'x-ig-www-claim': 'hmac.AR2vwrK6N6-zvgoKYwbfyergLzG_bzNaSKamXrL2z1M_qjku',
+    'x-instagram-ajax': '1045241378',
+    'x-requested-with': 'XMLHttpRequest',
+    'x-web-session-id': '5nm26g:nsu4la:4bq0il',
+}
+
+json_data = {
+    'device_screen_time_by_screen_key': '{"sleep_mode_blocking_screen":{"2026-08-15":0}}',
+    'excluded_screen_time_storage_ids': [],
+    'screen_time_by_screen_keys': [],
+    'screen_time_by_screen_values': [],
+    'screen_time_in_sec_per_day': [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        615,
+    ],
+    'screen_time_storage_id': 'E8314AF9-DC29-4D96-8156-A48190F94450',
+    'timezone': 'Asia/Aden',
+    'timezone_offset': 10800,
+    'jazoest': '22832',
+    'fb_dtsg': 'NAfwqk-64AY8izIAP9WxTQAjTgNjZGHIgMlYJBxICD9nAa_fli6kvWQ:17843691127146670:1786745934',
+}
+
+response = requests.post(
+    'https://www.instagram.com/api/v1/mental_well_being/update_screen_time/',
+    cookies=cookies,
+    headers=headers,
+    json=json_data,
+)
+
+# Note: json_data will not be serialized by requests
+# exactly as it was in the original request.
+#data = '{"device_screen_time_by_screen_key":"{\\"sleep_mode_blocking_screen\\":{\\"2026-08-15\\":0}}","excluded_screen_time_storage_ids":[],"screen_time_by_screen_keys":[],"screen_time_by_screen_values":[],"screen_time_in_sec_per_day":[0,0,0,0,0,0,615],"screen_time_storage_id":"E8314AF9-DC29-4D96-8156-A48190F94450","timezone":"Asia/Aden","timezone_offset":10800,"jazoest":"22832","fb_dtsg":"NAfwqk-64AY8izIAP9WxTQAjTgNjZGHIgMlYJBxICD9nAa_fli6kvWQ:17843691127146670:1786745934"}'
+#response = requests.post(
+#    'https://www.instagram.com/api/v1/mental_well_being/update_screen_time/',
+#    cookies=cookies,
+#    headers=headers,
+#    data=data,
+#)
+
+
+cookies = {
+    'ig_did': 'E8314AF9-DC29-4D96-8156-A48190F94450',
+    'datr': 'hZJ_asIWPxeRCWBvLRXiQ-PU',
+    'dpr': '3',
+    'mid': 'an-ShQABAAHKgVjqhW49mC2ihV7a',
+    'csrftoken': 'b9vhwL1lit6wsELuEWR9WfFDii1GqKKu',
+    'ds_user_id': '77224903190',
+    'sessionid': '77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA',
+    'rd_challenge': 'Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M',
+    'wd': '360x720',
+    'rur': '"CLN\\05477224903190\\0541818289148:01ffa9c6e7960bde17921877841e53490a2ab6b5c22bec37f5201c04e7dd50bfb137fee8"',
+}
+
+headers = {
+    'authority': 'www.instagram.com',
+    'accept': '*/*',
+    'accept-language': 'ar-EG,ar-MA;q=0.9,ar;q=0.8,en-US;q=0.7,en;q=0.6',
+    # 'cookie': 'ig_did=E8314AF9-DC29-4D96-8156-A48190F94450; datr=hZJ_asIWPxeRCWBvLRXiQ-PU; dpr=3; mid=an-ShQABAAHKgVjqhW49mC2ihV7a; csrftoken=b9vhwL1lit6wsELuEWR9WfFDii1GqKKu; ds_user_id=77224903190; sessionid=77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA; rd_challenge=Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M; wd=360x720; rur="CLN\\05477224903190\\0541818289148:01ffa9c6e7960bde17921877841e53490a2ab6b5c22bec37f5201c04e7dd50bfb137fee8"',
+    'referer': 'https://www.instagram.com/sedra_24_1_2007/',
+    'sec-ch-prefers-color-scheme': 'dark',
+    'sec-ch-ua': '"Chromium";v="139", "Not;A=Brand";v="99"',
+    'sec-ch-ua-full-version-list': '"Chromium";v="139.0.7339.0", "Not;A=Brand";v="99.0.0.0"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-model': '"TECNO CL7"',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua-platform-version': '"14.0.0"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36',
+    'x-asbd-id': '359341',
+    'x-csrftoken': 'b9vhwL1lit6wsELuEWR9WfFDii1GqKKu',
+    'x-ig-app-id': '1217981644879628',
+    'x-ig-max-touch-points': '5',
+    'x-ig-www-claim': 'hmac.AR2vwrK6N6-zvgoKYwbfyergLzG_bzNaSKamXrL2z1M_qjku',
+    'x-requested-with': 'XMLHttpRequest',
+    'x-web-session-id': '5nm26g:nsu4la:4bq0il',
+}
+
+response = requests.get(
+    'https://www.instagram.com/api/v1/mental_well_being/get_daily_limit_settings/',
+    cookies=cookies,
+    headers=headers,
+)
+
+
+cookies = {
+    'ig_did': 'E8314AF9-DC29-4D96-8156-A48190F94450',
+    'datr': 'hZJ_asIWPxeRCWBvLRXiQ-PU',
+    'dpr': '3',
+    'mid': 'an-ShQABAAHKgVjqhW49mC2ihV7a',
+    'csrftoken': 'b9vhwL1lit6wsELuEWR9WfFDii1GqKKu',
+    'ds_user_id': '77224903190',
+    'sessionid': '77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA',
+    'rd_challenge': 'Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M',
+    'wd': '360x720',
+    'rur': '"CLN\\05477224903190\\0541818289148:01ffa9c6e7960bde17921877841e53490a2ab6b5c22bec37f5201c04e7dd50bfb137fee8"',
+}
+
+headers = {
+    'authority': 'www.instagram.com',
+    'accept': '*/*',
+    'accept-language': 'ar-EG,ar-MA;q=0.9,ar;q=0.8,en-US;q=0.7,en;q=0.6',
+    'content-type': 'multipart/form-data; boundary=----WebKitFormBoundarySzVMD8wvOVdOmWG4',
+    # 'cookie': 'ig_did=E8314AF9-DC29-4D96-8156-A48190F94450; datr=hZJ_asIWPxeRCWBvLRXiQ-PU; dpr=3; mid=an-ShQABAAHKgVjqhW49mC2ihV7a; csrftoken=b9vhwL1lit6wsELuEWR9WfFDii1GqKKu; ds_user_id=77224903190; sessionid=77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA; rd_challenge=Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M; wd=360x720; rur="CLN\\05477224903190\\0541818289148:01ffa9c6e7960bde17921877841e53490a2ab6b5c22bec37f5201c04e7dd50bfb137fee8"',
+    'origin': 'https://www.instagram.com',
+    'referer': 'https://www.instagram.com/sedra_24_1_2007/',
+    'sec-ch-prefers-color-scheme': 'dark',
+    'sec-ch-ua': '"Chromium";v="139", "Not;A=Brand";v="99"',
+    'sec-ch-ua-full-version-list': '"Chromium";v="139.0.7339.0", "Not;A=Brand";v="99.0.0.0"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-model': '"TECNO CL7"',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua-platform-version': '"14.0.0"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'no-cors',
+    'sec-fetch-site': 'same-origin',
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36',
+}
+
+params = {
+    '__a': '1',
+    '__ccg': 'POOR',
+    '__comet_req': '7',
+    '__crn': 'comet.igweb.PolarisProfilePostsTabRoute',
+    '__d': 'www',
+    '__hs': '20680.HYP:instagram_web_pkg.2.1...0',
+    '__hsi': '7674041655814947065',
+    '__req': '3w',
+    '__rev': '1045241378',
+    '__s': '5nm26g:nsu4la:4bq0il',
+    '__spin_b': 'trunk',
+    '__spin_r': '1045241378',
+    '__spin_t': '1786752058',
+    '__user': '0',
+    'dpr': '3',
+    'fb_dtsg': 'NAfwqk-64AY8izIAP9WxTQAjTgNjZGHIgMlYJBxICD9nAa_fli6kvWQ:17843691127146670:1786745934',
+    'jazoest': '26237',
+    'lsd': 'E-myV3Zd0C6Img0LYKoNKr',
+    'ph': 'C3',
+}
+
+files = {
+    'ts': (None, '1786753148625'),
+    'post_0': ('blob', '\x93\fðc[["falco:instagram_web_time_spent_bit_array",{"e":"{\\"ig_userid\\":\\"77224903190\\",\\"pk\\":\\"772249031\r\x17,rollout_hash\x058$1045241378\x057loriginal_referrer\\":null,\\"o>\x1b\x00\x18_domain\x05G\x05=\x00r\x194D\\"/explore/search/2"\x00.;\x00\fwww.\x15ù\f.com6*\x00\burl\x05b\x1chttps://B/\x00Ri\x00\x116</sedra_24_1_2007\t\x87\x14nav_ch\x11¼\x1cPolarisE\t°\x10Root:\r¼\x00S\x05»TPage:1:via_cold_start,\r68ProfilePostsTab\x05>\x00p\r\x14\x018,2:unexpected\x05Ù\fapp_-´8121798164487962)\x82,frontend_env\x05ù\x04C3\x058\x05vE\x14H\\":1786753146,\\"tosI\x1d\x1c\\":[1,0]\r\x14\x1ccum\\":53\r\x0f\ru\x1c4bq0il\\"\r\x16\x04le!Á\x002\r\x0e\bseq\x01^\x181,\\"logBn\x0087628,\\"sid_raw\\Aa45nm26g:nsu4la:\x11]à}","r":1,"d":"E8314AF9-DC29-4D96-8156-A48190F94450","s":"NO\x00\f","t\x1dó\x01\x858.7002,"a":"1.0.\x01>\x04b"\x01ý(128],"id":{!j<ScopedIdentity":.\'\x03L","claim":"hmac_ttl.)Xà2058.AR1CFPWgsbyTcduUxHAJzZEV1vdr5-p4tD3uKxbixZ82SM60"}},\t?\x0431\t¤<9001,0,923],["faeâ)Um×hscreen_time",{"e":"{\\"actio!\x96\x04\\"\x01/,s_session_enIC\x14device.>\x00\b_by\x11\x0f\x04keA\bT{\\"sleep_mode_blocking\r$\x04\\"\x01 <2026-08-15\\":0}}!ÙPeconds_since_midnight%è\x1011947I6\x18imezone\x05\x17\x18Asia/AdAE ,\\"usage_\rF\x10\\":61AY\x10weekl\x15\xa0\btim\x01;\b[0,\x19\x02\f612]þ3\x02r3\x02\b924)\x8fþ3\x02þ3\x02j3\x020927.5,0,501]]', 'application/octet-stream'),
+    'q': (None, '[{"app_id":"1217981644879628","posts":"0","user":"17841477255723112","webSessionId":"5nm26g:nsu4la:4bq0il","send_method":"beacon","compression":"snappy","snappy_ms":1}]'),
+}
+
+response = requests.post('https://www.instagram.com/ajax/bz', params=params, cookies=cookies, headers=headers, files=files)
+
+
+cookies = {
+    'ig_did': 'E8314AF9-DC29-4D96-8156-A48190F94450',
+    'datr': 'hZJ_asIWPxeRCWBvLRXiQ-PU',
+    'dpr': '3',
+    'mid': 'an-ShQABAAHKgVjqhW49mC2ihV7a',
+    'csrftoken': 'b9vhwL1lit6wsELuEWR9WfFDii1GqKKu',
+    'ds_user_id': '77224903190',
+    'sessionid': '77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA',
+    'rd_challenge': 'Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M',
+    'wd': '360x720',
+    'rur': 'RVA%2C17841477255723112%2C1787962748%3A01ff598b39d2430dd340a53322f422ff189e45cfb55575a7b3737d875904410cf1c6f096',
+}
+
+headers = {
+    'authority': 'www.instagram.com',
+    'accept': '*/*',
+    'accept-language': 'ar-EG,ar-MA;q=0.9,ar;q=0.8,en-US;q=0.7,en;q=0.6',
+    'content-type': 'multipart/form-data; boundary=----WebKitFormBoundarymbEaR37BMsnHj7UT',
+    # 'cookie': 'ig_did=E8314AF9-DC29-4D96-8156-A48190F94450; datr=hZJ_asIWPxeRCWBvLRXiQ-PU; dpr=3; mid=an-ShQABAAHKgVjqhW49mC2ihV7a; csrftoken=b9vhwL1lit6wsELuEWR9WfFDii1GqKKu; ds_user_id=77224903190; sessionid=77224903190%3AwBXeJkzBqar8PC%3A15%3AAYiQ1CHG4iuYU7EqFIPMh7q6sR6QjE5g6ibRipCQWA; rd_challenge=Q_6hBQTpVBR1xBsjvD47Zxhn5DSdra-Dn_aZTeEepXgf1x5gqys16CRjql6noNBS9MV4wUfK3_IMB4Obtn4SWg-WQ0M; wd=360x720; rur=RVA%2C17841477255723112%2C1787962748%3A01ff598b39d2430dd340a53322f422ff189e45cfb55575a7b3737d875904410cf1c6f096',
+    'origin': 'https://www.instagram.com',
+    'referer': 'https://www.instagram.com/sedra_24_1_2007/',
+    'sec-ch-prefers-color-scheme': 'dark',
+    'sec-ch-ua': '"Chromium";v="139", "Not;A=Brand";v="99"',
+    'sec-ch-ua-full-version-list': '"Chromium";v="139.0.7339.0", "Not;A=Brand";v="99.0.0.0"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-model': '"TECNO CL7"',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-ch-ua-platform-version': '"14.0.0"',
+    'sec-fetch-dest': 'empty',
+    'sec-fetch-mode': 'cors',
+    'sec-fetch-site': 'same-origin',
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Mobile Safari/537.36',
+    'x-asbd-id': '359341',
+    'x-fb-lsd': 'E-myV3Zd0C6Img0LYKoNKr',
+}
+
+params = {
+    '__a': '1',
+    '__ccg': 'POOR',
+    '__comet_req': '7',
+    '__crn': 'comet.igweb.PolarisProfilePostsTabRoute',
+    '__d': 'www',
+    '__hs': '20680.HYP:instagram_web_pkg.2.1...0',
+    '__hsi': '7674041655814947065',
+    '__req': '3x',
+    '__rev': '1045241378',
+    '__s': '5nm26g:nsu4la:4bq0il',
+    '__spin_b': 'trunk',
+    '__spin_r': '1045241378',
+    '__spin_t': '1786752058',
+    '__user': '0',
+    'dpr': '3',
+    'fb_dtsg': 'NAfwqk-64AY8izIAP9WxTQAjTgNjZGHIgMlYJBxICD9nAa_fli6kvWQ:17843691127146670:1786745934',
+    'jazoest': '26237',
+    'lsd': 'E-myV3Zd0C6Img0LYKoNKr',
+    'ph': 'C3',
+}
+
+files = {
+    'ts': (None, '1786753150538'),
+    'post_0': ('blob', 'x\x9cmR]OÛ0\x14ý/~N+Çq\x12§oQ[\x18Û\x98P)\x9b\x04\xad"7q[\x8bÄ\x0e¶Ãè\x10ÿ}×NÙ\x98´7ûÜsÏ¹_\x0f\x0fhÏÛZÏzaö(zE\x02ÍÐë\x06uÜ<\nSÉf\x83f9Î2FpÎ¢\râµ\x93Z\x8d8\x81¿TÖqU\x8b\x11Á\x80XÞõ\xad¨\fw\x02\x90\x18\x90N¸£öá\r2\\5º«\x02GªÃ\x06A¸\x19\x80ëE\x95\r\x1cV\x14\x05&!Ôk©\x9cG\x1f¶£\x0eo¸ãð\x87\ny\x0f\x12õ\x98É\x15oONÖv\f9Ù\x89ÊJ_ÖSßV\x9dn\x06¨H*é|E\x981\x96Ði\x066i\x1cçqñ\x16´;mN\x154ãÞE´ã\x90+:ø²\x14\x8aJhZ\x10ÏUÂýÔæñ#¹Ñ?\x154ô\bü\x03ßÉ\x00\x93\x8fÔaçN½\býÑ±mã\\ÕÙP\x10öªV:á»\x83:÷zT\xad[)\x94«úÁ\x1e«þÈí\x98?OBþ9hÄ³´0\x83 DSBã$,Ê\nó\f\vüoØÛµºæa(ïf#\x10\x1c¸©ÊU0\x91vµþêsßÂ\x90Æ£8wâW»oùÁ\x9eß\\)\x18\x99ßÇy(ç[ùÓøÝÍ¢\\/«òòrµ¼ô¯Ûùj¹üV\xad¯®\x97\x1bä\rj\xadöòð7£7þnÞP\x84\x8c÷@\r\x1cç\x92%1-/\x8aÉbN\x8a\t]\x14Ù\x84Åi6))\x8b\v|QP\x9abH°@MUG²ÃLÙ\x81¶|FwOX¶\x10r\xa0\x95³,OA\x88å\x19\x9b\x822\az<ÅS\x9fº\x83{\x8b£\x98°m\x84$X¾ú[»\xadu/\x9a«\x06f.Ý\tØyN\b-p\x02¦\x90S·\\v\x80\x1e;^WÎµÓÑ\x81à\x94MËU<¿¸ùq°»Óºn\x86»\x97Oåç_÷ËïñscÒIOÝ"\x19¾¼ìäË=#·×\x19F0ì\x7f\v$\x18\x93\bG\x05¦Ûíoè-*D', 'application/octet-stream'),
+    'q': (None, '[{"app_id":"1217981644879628","posts":"0","user":"17841477255723112","webSessionId":"5nm26g:nsu4la:4bq0il","trigger":"falco:perf","send_method":"ajax","compression":"deflate","snappy_ms":14}]'),
+}
+
+response = requests.post('https://www.instagram.com/ajax/bz', params=params, cookies=cookies, headers=headers, files=files)
